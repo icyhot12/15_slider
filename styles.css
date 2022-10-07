@@ -1,8 +1,49 @@
-* {
-    box-sizing: border-box;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
+button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.library-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.section-center {
+  border: 5px solid lightskyblue;
+  border-radius: 5px;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  grid-row: 2/3;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 400px;
+  width: 400px;
+  transition: 1s;
+}
+
+.btn-container {
+  padding-top: 15px;
+  grid-row: 3/4;
+}
+
+.image {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
 }
